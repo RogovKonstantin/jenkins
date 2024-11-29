@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>jenkinslabapp</artifactId>
+    <artifactId>app-for-jenkins</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jenkinslab</name>
-    <description>jenkinslab</description>
+    <name>jenkins-app</name>
+    <description>jenkins-app</description>
     <url/>
     <licenses>
         <license/>

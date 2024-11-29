@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'jenkinslabappimage'
+        DOCKER_IMAGE = 'jenkins-app-image'
         DOCKER_TAG = 'latest'
     }
 
@@ -42,9 +42,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                docker stop jenkinslabapp || true
-                docker rm jenkinslabapp || true
-                docker run -d --name jenkinslabapp -p 9000:9000 ${DOCKER_IMAGE}:${DOCKER_TAG}
+                docker stop jenkins-app || true
+                docker rm jenkins-app || true
+                docker run -d --name jenkins-app -p 9000:9000 ${DOCKER_IMAGE}:${DOCKER_TAG}
                 '''
             }
         }
