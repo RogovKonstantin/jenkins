@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'd8119c82-f6c1-4a8a-ba4a-5d7e173b160e', url: 'https://github.com/dimapartov/JenkinsLab.git', branch: 'master'
+                git credentialsId: '64841f38-338d-4e86-8248-a89b5bb8c573', url: 'https://github.com/RogovKonstantin/jenkins.git', branch: 'master'
             }
         }
 
@@ -44,7 +44,7 @@ pipeline {
                 sh '''
                 docker stop jenkinslabapp || true
                 docker rm jenkinslabapp || true
-                docker run -d --name jenkinslabapp -p 8081:8081 ${DOCKER_IMAGE}:${DOCKER_TAG}
+                docker run -d --name jenkinslabapp -p 9000:9000 ${DOCKER_IMAGE}:${DOCKER_TAG}
                 '''
             }
         }
