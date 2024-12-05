@@ -17,7 +17,7 @@ public class ProductController {
                 Map.of("id", 2, "name", "Phone", "price", 800)
         );
     }
-
+//ff
     @GetMapping("/{id}")
     public Map<String, Object> getProductById(@PathVariable int id) {
         return Map.of("id", id, "name", id == 1 ? "Laptop" : "Unknown", "price", id == 1 ? 1200 : 0);
